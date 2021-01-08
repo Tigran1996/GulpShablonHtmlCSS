@@ -1,0 +1,123 @@
+.ch{
+  //input type checkbox
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    display: none;
+    position: absolute;
+    left: -9999px; }
+
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 4px;
+    text-align: left;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 20px;
+  }
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #717171;
+    background: transparent;
+    border-radius: 3px;
+  }
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $main-color;
+    background: $main-color;
+    box-shadow: 0px 3px 11px rgba(0, 97, 194, 0.25);
+    border-radius: 3px;
+    z-index:1;
+  }
+  /* checked mark aspect */
+  [type="checkbox"]:not(:checked) + label:after,
+  [type="checkbox"]:checked + label:after {
+    content: url("../img/css_img/pathq.png");
+    width: 14px;
+    object-fit: contain;
+    height: 19px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transition: all .2s;
+    z-index: 32;
+    transform: translateY(-50%) scale(1) !important;
+  }
+  /* checked mark aspect changes */
+  [type="checkbox"]:not(:checked) + label:after {
+    opacity: 0;
+    transform: scale(0); }
+
+  [type="checkbox"]:checked + label:after {
+    opacity: 1;
+    transform: scale(1); }
+
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #999999;
+    background-color: #dddddd; }
+
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999999; }
+
+  [type="checkbox"]:disabled + label {
+    color: #aaaaaa; }
+
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+    border: 2px solid $main-color; }
+}
+.rtl{
+  .ch{
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+      padding-right: 29px;
+    }
+    [type="checkbox"]:checked + label:before,[type="checkbox"]:not(:checked) + label:before {
+      right: 0;
+    }
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+      right: 3px;
+    }
+  }
+}
+.ltr {
+  .ch{
+    [type="checkbox"]:not(:checked) + label,
+    [type="checkbox"]:checked + label {
+      padding-left: 29px;
+    }
+    [type="checkbox"]:checked + label:before,[type="checkbox"]:not(:checked) + label:before {
+      left: 0;
+    }
+    [type="checkbox"]:not(:checked) + label:after,
+    [type="checkbox"]:checked + label:after {
+      left: 3px;
+    }
+  }
+
+}
+//input type checkbox END
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+}

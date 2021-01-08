@@ -1,0 +1,139 @@
+.two-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: 45%;
+  }
+  > div:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+.three-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: 32%;
+  }
+  > div:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+.four-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div{
+    width: 24%;
+  }
+  > div:nth-last-child(1){
+    margin-right: 0;
+  }
+}
+
+
+
+@include adaptiv-to(comp-screens ) {
+}
+@include adaptiv-to(tablet-screens) {
+  .modal{
+    .mg-b-50{
+      margin-bottom: 30px !important;
+    }
+    .mg-b-20{
+      margin-bottom: 20px !important;
+    }
+  }
+  div.mobile-two-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div{
+      width: 45% !important;
+    }
+    > div:nth-last-child(1){
+      margin-right: 0 !important;
+    }
+  }
+  .four-flex{
+    > div {
+      width: 49% !important;
+
+      margin-bottom: 25px;
+    }
+    > div:nth-last-child(-n+2){
+      margin-bottom: 0;
+    }
+  }
+  .two-flex{
+    > div {
+      width: 100% !important;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+  .three-flex{
+    > div {
+      width: 100% !important;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+  .tablet-unset-two.two-flex{
+    > div{
+      width: 45% !important;
+      margin-bottom: 0;
+    }
+    > div:nth-last-child(1){
+      margin-right: 0 !important;
+    }
+  }
+}
+@include adaptiv-to(phone-screens) {
+  .modal{
+    .mg-b-50{
+      margin-bottom: 30px !important;
+    }
+    .mg-b-20{
+      margin-bottom: 20px !important;
+    }
+  }
+  div.mobile-two-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > div{
+      width: 45% !important;
+    }
+    > div:nth-last-child(1){
+      margin-right: 0 !important;
+    }
+  }
+  .two-flex,.four-flex{
+    > div {
+      width: 100% !important;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+  .three-flex{
+    > div {
+      width: 100% !important;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    > div:nth-last-child(1){
+      margin-bottom: 0;
+    }
+  }
+}

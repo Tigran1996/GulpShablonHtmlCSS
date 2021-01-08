@@ -1,0 +1,127 @@
+.button-group{
+  width: 100%;
+  margin: 60px auto;
+  margin-bottom: 0;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  .button{
+    max-width: 207px;
+  }
+  .button+.button{
+    margin-right: 40px;
+  }
+}
+.button-single{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  button,input{
+    min-width:245px;
+    padding:12px;
+    border-radius:28px;
+  }
+}
+.refund-btn{
+  padding: 0;
+  padding-top: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #FF0000;
+  outline: none !important;
+  &:hover{
+    outline: none !important;
+    color: #ff0000;
+  }
+}
+//button loader
+.btn-loader.sending{
+  padding-right: 50px;
+  transition: padding-right 0.5s;
+}
+.btn-loader{
+  position: relative;
+  transition: padding-right 0.5s;
+  &:before {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -12px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    animation: 0.8s linear infinite rotate;
+  }
+  &.sending{
+    pointer-events: none;
+    cursor: not-allowed;
+
+    &:before {
+      transition-delay: 0.5s;
+      transition-duration: 1s;
+      opacity: 1;
+    }
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+//button loader end
+
+
+@include adaptiv-to(comp-screens ) {
+}
+@include adaptiv-to(tablet-screens) {
+  .button-group{
+    margin-top: 25px;
+    .button{
+      max-width: 150px;
+      min-width: 130px;
+    }
+    .button + .button{
+      margin-right: 28px;
+    }
+  }
+  .warning-button-group{
+    .button{
+      max-width: 132px;
+      min-width: 128px;
+    }
+  }
+}
+@include adaptiv-to(phone-screens) {
+  .button-group{
+    margin-top: 25px;
+    .button{
+      width: 100%;
+      max-width: 150px;
+      min-width: 130px;
+    }
+    .button + .button{
+      margin-right: 28px;
+    }
+  }
+  .warning-button-group{
+    .button{
+      max-width: 132px;
+      min-width: 128px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.rtl{
+  direction:rtl;
+  text-align: right;
+  .btn-blue,.blue-text,.orange-text{
+    font-family: 'Rubik' !important;
+  }
+  footer {
+    .container-fluid {
+      .footer-title {
+        font-family: 'Rubik' !important;
+      }
+    }
+    .copyright{
+      .container-fluid{
+        p,a{
+          font-family: 'Rubik' !important;
+        }
+      }
+    }
+  }
+  header .header-bottom .nav-links ul li a{
+    font-family: 'Rubik' !important;
+  }
+  #moneytransfer .modal-title,#moneytransfer .modal-title b{
+    font-family: 'Rubik' !important;
+  }
+  .right-sidebar {
+    .sidebar-bottom {
+      .sid-bottom-title {
+        h4 {
+          font-family: 'Rubik' !important;
+        }
+        h3 {
+          font-family: 'Rubik' !important;
+        }
+      }
+    }
+  }
+  .language.dropdown__my{
+    margin-left: 0;
+    margin-right: 40px;
+  }
+  .dropdown__my__click .dropdown-content ul li{
+    text-align: right;
+  }
+  footer .container-fluid .social-media .footer-social .social + .social {
+    margin-left: 0px;
+    margin-right: 10px;
+  }
+  header .header-social .container-fluid .social {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  header .header-bottom .nav-links ul li:before{
+    left: unset;
+    right: 0;
+  }
+  .owl-stage-outer{
+    position:relative;
+    overflow:hidden;
+    -webkit-transform:translate3d(0,0,0);
+    direction: ltr;
+  }
+  #accordion {
+    .card-header{
+      padding: 8px 0px 8px 20px;
+    }
+    .accordeon-body {
+      padding: 15px 70px 15px 0px;
+    }
+    .arrow-img{
+      border-right: 0;
+      border-left: 1px solid rgba(59, 47, 120, 0.2);
+    }
+  }
+  .search-mobile .input{
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .comercial-card .cd-head .img{
+    margin-left: 14px;
+    margin-right: 0px;
+  }
+  .homepage-top-owl .owl-nav .left:before,.homepage-top-owl .owl-nav .right:before{
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}

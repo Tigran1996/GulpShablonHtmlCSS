@@ -1,0 +1,117 @@
+.dropdown__my{
+  margin-left: 40px;
+  position: relative;
+  .dropdown-toogler{
+    display: flex;
+    align-items: center;
+    span{
+      padding: 0 10px;
+      font-size: 18px;
+      line-height: 25px;
+      color: rgba(255, 255, 255, 0.87);
+    }
+    .arrow-down{
+      width: 10px;
+      height: 5px;
+    }
+  }
+  .dropdown-content{
+    position: absolute;
+    top: 31px;
+    width: 100%;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-in-out;
+    ul{
+      background: #FFFFFF;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      overflow: hidden;
+      li{
+        padding: 10px 11px;
+        a{
+          display: block;
+          width: 100%;
+          span{
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 22px;
+            color: #3B2F78;
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+  &:hover{
+    .dropdown-content{
+      z-index: 10;
+      opacity: 1;
+      visibility: visible;
+      transition: all 500ms ease-in-out;
+      li{
+        &:hover{
+          background: rgb(244, 244, 244);
+        }
+      }
+    }
+  }
+}
+.lang-item-he{
+  a{
+    span{
+      font-family: 'Rubik' !important;
+    }
+  }
+}
+.dropdown__my__click.language-mobile .dropdown-content ul li{
+  //text-align: center !important;
+}
+.dropdown__my__click{
+  position: relative;
+  .dropdown-toogler {
+    span {
+      padding: 0 10px;
+    }
+  }
+  .dropdown-content{
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-in-out;
+    ul{
+      text-align: left;
+      li{
+        padding: 10px 11px;
+        a{
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: 0.2px;
+          color: $color-black-07;
+          display: flex;
+          align-items: center;
+          //justify-content: center;
+          span{
+            padding: 0 10px;
+          }
+        }
+        &:hover{
+          background: rgb(244, 244, 244);
+        }
+      }
+    }
+  }
+  .dropdown-content.show{
+    height: 100%;
+    position: unset;
+    max-width: 100%;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease-in-out;
+
+  }
+}
+

@@ -1,0 +1,31 @@
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  //border-radius: 10px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb{
+  //border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #0061C1;
+}
+.scrollbar
+{
+  overflow-y: auto;
+}
+
+@include adaptiv-to(phone-screens) {
+  .bg{
+    min-height: 90px !important;
+  }
+}
+@include adaptiv-to(tablet-screens) {
+  .bg{
+    min-height: 120px !important;
+  }
+}

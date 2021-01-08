@@ -1,0 +1,123 @@
+footer{
+  z-index: 10;
+  background: #FAFAFA;
+  position: relative;
+  border-top: 1px solid #C4C4C4;
+  .container-fluid{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    .footer-title{
+      color: #3B2F78;
+      font-weight: bold;
+      font-family: "Open Sans Bold";
+    }
+    .hours{
+      color: #3B2F78;
+      margin-top: 10px;
+      p{
+        margin-bottom: 0;
+      }
+      span{
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+    ul{
+      li{
+        margin-bottom: 10px;
+        a{
+          color: #565656;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .we-chat{
+      max-width: 15%;
+      li{
+        cursor: pointer;
+      }
+    }
+    .social-media{
+      .footer-social{
+        display: flex;
+        align-items: center;
+        .social{
+            path{
+              fill:red;
+            }
+        }
+        .social + .social{
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  .copyright{
+    background: #51419E;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .container-fluid{
+      padding-top: 22px;
+      padding-bottom: 22px;
+      .two-flex{
+        &>div{
+          width: 49%;
+        }
+      }
+      p,a{
+        font-family: 'Noto Sans';
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include adaptiv-to(phone-screens) {
+  footer{
+    .container-fluid{
+      .we-chat{
+        max-width: 100%;
+      }
+      .footer-menu{
+        ul{
+          grid-template-columns: auto auto;
+          li{
+            height: 52px;
+            .social-media{
+              @include flex;
+              a{
+                margin-right: 5px;
+                margin-bottom: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+@include adaptiv-to(tablet-screens) {
+  footer{
+    .container-fluid{
+      .we-chat{
+        max-width: 100%;
+      }
+      .footer-menu{
+        ul{
+          grid-template-columns: auto auto auto;
+
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.custom-control-label::before {
+  position: absolute;
+  top: .25rem;
+  left: -1.5rem;
+  display: block;
+  height: 32px;
+  pointer-events: none;
+  content: "";
+  background-color: transparent;
+  width: 52px !important;
+  border-radius: 36.5px !important;
+  border: #E5E5EA solid 1px;
+  outline: none;
+}
+.custom-switch .custom-control-label::after {
+  background-color: #FFFFFF !important;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 1px 1px rgba(0, 0, 0, 0.16), 0px 3px 1px rgba(0, 0, 0, 0.1);
+  top: -2px;
+  left: 4px;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  outline: none;
+
+}
+.custom-switch .custom-control-input:checked~.custom-control-label::after {
+  background-color: #fff;
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+  outline: none;
+  left: 0;
+}
+.custom-control-label{
+  width: 52px;
+  outline: none;
+}
+.custom-control-input{
+  outline: none;
+}
+.custom-control-input:checked~.custom-control-label::before {
+  color: #fff;
+  border-color: #0098B9;
+  background-color: #0098B9;
+  outline: none;
+
+}
+.custom-switch .custom-control-label::before{
+  left: 0;
+  top: -4px;
+}

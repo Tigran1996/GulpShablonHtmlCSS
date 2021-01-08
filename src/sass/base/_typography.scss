@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Rubik-light';
+  src: url('../fonts/Rubik-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik-bold';
+  src: url('../fonts/Rubik-Bold.ttf') format('truetype');
+}
+$bold:'Rubik-bold';
+//Language font styles
+body{
+  font-family: 'Rubik';
+}
+
+.rtl{
+  h1,h2,h3,h4{
+    font-family: 'Rubik-bold' !important;
+  }
+}
+.rtl{
+  font-family: 'Rubik' !important;
+}
+
+.en{
+
+}
+.ru{
+
+}
+b,strong{
+  font-family: $bold;
+}
+ul{
+  list-style: none;
+  margin-bottom: 0;
+}
+a,a:hover{
+  text-decoration: none;
+}
+
+@include adaptiv-to(comp-screens ) {
+  @include font-comp;
+}
+@include adaptiv-to(tablet-screens) {
+  @include font-tablet;
+}
+@include adaptiv-to(phone-screens) {
+  @include font-phone;
+}

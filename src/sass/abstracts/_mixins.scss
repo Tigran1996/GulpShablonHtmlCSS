@@ -1,0 +1,133 @@
+//BACKGROUND
+
+@mixin backimg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+//flex
+@mixin flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+//fonts sizes
+@mixin font-comp{
+  body{
+    font-size: 16px;
+    line-height: 21px;
+    h1{
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 46px;
+    }
+    h2{
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+    }
+    h3{
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px;
+    }
+    h4{
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    p,li,span,button{
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+@mixin font-tablet{
+  body{
+    font-size: 17px;
+    line-height: 22px;
+    h1{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    h2{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    h3{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    h4{
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    p,li,span,button{
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+@mixin font-phone{
+  body{
+    font-size: 17px;
+    line-height: 22px;
+    h1{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    h2{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    h3{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+    }
+    h4{
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    p,li,span,button{
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}
+//  TEXT OVERFLOW ELLIPSES
+
+@mixin ellipses($elheight, $row) {
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  height: $elheight;
+  -webkit-line-clamp: $row;
+}
+
+$comp: 1200px;
+$tablet: 768px;
+$phone: 600px;//not used
+
+@mixin adaptiv-to($media) {
+  @if $media == phone-screens {
+    @media only screen and (max-width: $tablet - 1) {
+      @content;
+    }
+  } @else if $media == tablet-screens {
+    @media only screen and (min-width: $tablet) and (max-width: $comp) {
+      @content;
+    }
+  } @else if $media == comp-screens {
+    @media only screen and (min-width: $comp + 1) and (min-width: $comp) {
+      @content;
+    }
+  }
+}
